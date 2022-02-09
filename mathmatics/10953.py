@@ -9,5 +9,5 @@
 T=int(input())
 
 for i in range(T):
-    a,b=map(int,input("숫자를 입력하세요").split(","))
+    a,b=map(int,input("숫자를 입력하세요:").split(","))
     print(a+b)

@@ -9,7 +9,7 @@
 
 
 while 1:
-    a,b=map(int,input("숫자를 압력").split())
+    a,b=map(int,input("숫자를 압력하세요").split())
     if a==0 and b==0:
         break
     else:

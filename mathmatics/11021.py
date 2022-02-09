@@ -5,8 +5,7 @@
 # 테스트 케이스 번호는 1부터 시작한다.
 
 t=int(input())
-for i in range(t):
-    i += 1
+for i in range(1,t+1):
     a,b=map(int,input().split())
     print("Case #%s:%s" %(i,a+b))
     
