@@ -13,5 +13,14 @@
 # 예제 출력 1 
 # 1
 
-
+n=int(input("1"))
 print(sum(map(int,input())))
+
+
+# for문을 활용한 방법
+n=int(input("1"))
+nums=int(input("2"))
+totals=0
+for i in range(nums):
+    totals+=int(input("3"))
+print(totals)
