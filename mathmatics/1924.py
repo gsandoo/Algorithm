@@ -32,4 +32,10 @@
 # print(weekday[day])                                     >> 요일리스트에서 인덱싱으로 찾음
 
         
-
+m,d=map(int,input().split())
+mlist=(31,28,31,30,31,30,31,31,30,31,30,31)
+weekday=("SUN","MON","TUE","WED","THU","FRI","SAT")
+maddtotal=0
+for i in range(0,m-1):
+    maddtotal+=mlist[i]
+print(weekday[(maddtotal+d)%7])

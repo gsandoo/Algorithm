@@ -17,3 +17,5 @@
 # m=list(map(int,(input().split())))          >> map 함수를 list 로 묶으면 리스트화 됌    
 # s=sorted(m)                                 >> sorted 함수는 순서대로 정렬
 # print(s[0],s[-1])
+
+    
