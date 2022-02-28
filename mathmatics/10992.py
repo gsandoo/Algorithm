@@ -45,9 +45,9 @@ else:
 
 # 수정 코드
 
-n = int(input())
-for i in range(1, n+1):
-    if(i==1 or i==n):
-        print(" " * (n-i) + "*" * (2*i-1))
+n= int(input())
+for i in range(1,n+1):
+    if i==n or i==1:
+        print(" "*(n-i)+"*"*(n*2-1))
     else:
-        print(" " * (n-i) + "*" + " " * (2*(i-1)-1) + "*")
+        print(" "*(n-i)+"*"+" "*(2*i-3)+"*")
