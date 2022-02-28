@@ -30,6 +30,8 @@
 #  *   *
 # *******
 
+# 첫번째 코드
+
 n=int(input())
 if n<=2:
     for i in range(n):
@@ -40,3 +42,12 @@ else:
     for i in range(1,n-1):
         print(" "*(n-i)+'*'+" "*(i*2-1)+"*")
     print(" "+"*"*(n*2-1))
+
+# 수정 코드
+
+n = int(input())
+for i in range(1, n+1):
+    if(i==1 or i==n):
+        print(" " * (n-i) + "*" * (2*i-1))
+    else:
+        print(" " * (n-i) + "*" + " " * (2*(i-1)-1) + "*")
