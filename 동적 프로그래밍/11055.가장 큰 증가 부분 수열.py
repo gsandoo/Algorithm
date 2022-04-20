@@ -34,17 +34,29 @@
 # dp=[]
 
 
+# n = int(input())
+# a = list(map(int, input().split()))
+# dp = [0 for i in range(n)]
+# dp[0] = a[0]                # 0의 자리 값을 지정해주고 시작
+# for i in range(1, n):       # 1부터 n 앞자리 까지 (0자리 는 이미 구했으니)
+#     s = []                  # i 보다 작은 전 값들을 담아두는 리스트
+#     for j in range(i - 1, -1, -1): #i-1 부터 0까지 역순으로 리스트 s 에 저장
+#         if a[i] > a[j]:             # i값이 전 값 (i-1) 보다 크다면
+#             s.append(dp[j])         # s 배열에 에 dp배열(전 값들의 합) j 값을 저장.
+#     if not s:                   
+#         dp[i] = a[i]
+#     else:
+#         dp[i] = a[i] + max(s)       # a(i)와 s의 최댓값을 더하기
+# print(max(dp))
+
+
 n = int(input())
 a = list(map(int, input().split()))
-dp = [0 for i in range(n)]
-dp[0] = a[0]                # 0의 자리 값을 지정해주고 시작
-for i in range(1, n):       # 1부터 n 앞자리 까지 (0자리 는 이미 구했으니)
-    s = []                  # i 보다 작은 전 값들을 담아두는 리스트
-    for j in range(i - 1, -1, -1): #i-1 부터 0까지 역순으로 리스트 s 에 저장
-        if a[i] > a[j]:             # i값이 전 값 (i-1) 보다 크다면
-            s.append(dp[j])         # s 배열에 에 dp배열(전 값들의 합) j 값을 저장.
-    if not s:                   
-        dp[i] = a[i]
-    else:
-        dp[i] = a[i] + max(s)       # a(i)와 s의 최댓값을 더하기
+dp=a
+
+for i in range(n):
+    for j in range(i):
+        if a[i]> a[j]:
+            dp[i]=max(dp[i],dp[j]+dp[i])
 print(max(dp))
+
