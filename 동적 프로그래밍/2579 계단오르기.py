@@ -40,6 +40,9 @@ s= []
 for i in range (n):
     num = int(input())
     s.append(num)
-arr = []
-arr.append(s[0])
+rs=s[::-1] # 리버스
+dp = []
+
+
+
 
